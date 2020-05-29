@@ -56,15 +56,47 @@
 		2BC93D062480F91B00CD53DC /* PersonalPageApp */ = {
 			isa = PBXGroup;
 			children = (
-				2BC93D072480F91B00CD53DC /* AppDelegate.swift */,
-				2BC93D092480F91B00CD53DC /* SceneDelegate.swift */,
-				2BC93D0B2480F91B00CD53DC /* ViewController.swift */,
-				2BC93D0D2480F91B00CD53DC /* Main.storyboard */,
-				2BC93D102480F91D00CD53DC /* Assets.xcassets */,
-				2BC93D122480F91D00CD53DC /* LaunchScreen.storyboard */,
-				2BC93D152480F91D00CD53DC /* Info.plist */,
+				2BC93D1E2480F9D000CD53DC /* ViewControllers */,
+				2BC93D1C2480F99800CD53DC /* Storyboard */,
+				2BC93D1B2480F94D00CD53DC /* SupportFiles */,
+				2BC93D1D2480F9A800CD53DC /* Sources */,
 			);
 			path = PersonalPageApp;
+			sourceTree = "<group>";
+		};
+		2BC93D1B2480F94D00CD53DC /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2BC93D072480F91B00CD53DC /* AppDelegate.swift */,
+				2BC93D092480F91B00CD53DC /* SceneDelegate.swift */,
+				2BC93D152480F91D00CD53DC /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		2BC93D1C2480F99800CD53DC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2BC93D0D2480F91B00CD53DC /* Main.storyboard */,
+				2BC93D122480F91D00CD53DC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		2BC93D1D2480F9A800CD53DC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2BC93D102480F91D00CD53DC /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2BC93D1E2480F9D000CD53DC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BC93D0B2480F91B00CD53DC /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +318,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ZXQUQVQEL;
-				INFOPLIST_FILE = PersonalPageApp/Info.plist;
+				INFOPLIST_FILE = PersonalPageApp/SupportFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +327,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.pavelparshin.PersonalPageApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +337,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ZXQUQVQEL;
-				INFOPLIST_FILE = PersonalPageApp/Info.plist;
+				INFOPLIST_FILE = PersonalPageApp/SupportFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.pavelparshin.PersonalPageApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
