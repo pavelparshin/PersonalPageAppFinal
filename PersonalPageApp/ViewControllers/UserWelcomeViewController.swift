@@ -26,6 +26,7 @@ class UserWelcomeViewController: UIViewController {
     @IBAction func pressLogOutButton() {
     }
     
+    
     //функция определяет текущий час и создаёт предложение проведения хорошего утра, дня, вечера, ночи
     private func getGoodMessage() -> String {
         var message = "Good "

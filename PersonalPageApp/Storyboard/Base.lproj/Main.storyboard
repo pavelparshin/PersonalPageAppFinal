@@ -109,7 +109,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C18-sY-Hyg">
-                                <rect key="frame" x="121.5" y="430" width="77" height="39"/>
+                                <rect key="frame" x="121.5" y="479" width="77" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
@@ -224,6 +224,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FtX-4O-WeZ"/>
+        <segue reference="3pt-xp-1Ey"/>
     </inferredMetricsTieBreakers>
 </document>

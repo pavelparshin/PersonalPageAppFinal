@@ -32,6 +32,14 @@ class ViewController: UIViewController {
         let welcomeVC = segue.destination as! UserWelcomeViewController
         welcomeVC.userName = userNameTextField.text
     }
+}
+
+//MARK: UIAlertController
+extension UIViewController {
     
+    private func forgotUserName(title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        present(alert, animated: true)
+    }
 }
 

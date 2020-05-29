@@ -12,3 +12,4 @@ enum PhaseOfTheDay: String {
     case evening = "Evening"
     case night = "Night"
 }
+
