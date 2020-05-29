@@ -24,7 +24,6 @@ class UserWelcomeViewController: UIViewController {
     }
     
     @IBAction func pressLogOutButton() {
-        dismiss(animated: true)
     }
     
     //функция определяет текущий час и создаёт предложение проведения хорошего утра, дня, вечера, ночи

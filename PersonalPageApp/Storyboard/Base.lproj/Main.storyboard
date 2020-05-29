@@ -109,11 +109,12 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C18-sY-Hyg">
-                                <rect key="frame" x="121.5" y="479" width="77" height="39"/>
+                                <rect key="frame" x="121.5" y="430" width="77" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
                                     <action selector="pressLogOutButton" destination="xZg-aO-GRC" eventType="touchUpInside" id="6gs-t1-kQq"/>
+                                    <segue destination="73r-kU-KZI" kind="unwind" unwindAction="unwidSegueWithSegue:" id="AGq-7h-6ss"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -134,8 +135,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tec-3t-BUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="73r-kU-KZI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1684" y="137"/>
+            <point key="canvasLocation" x="919" y="937"/>
         </scene>
         <!--User Welcome View Controller-->
         <scene sceneID="4ox-On-SeO">
@@ -199,7 +201,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTn-eM-mtJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903.75" y="136.26760563380282"/>
+            <point key="canvasLocation" x="1337" y="137"/>
         </scene>
         <!--Item-->
         <scene sceneID="0RZ-en-3bk">
@@ -222,6 +224,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3pt-xp-1Ey"/>
+        <segue reference="FtX-4O-WeZ"/>
     </inferredMetricsTieBreakers>
 </document>

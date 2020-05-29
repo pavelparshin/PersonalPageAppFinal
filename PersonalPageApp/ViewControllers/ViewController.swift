@@ -22,9 +22,15 @@ class ViewController: UIViewController {
     @IBAction func pressLogInButton() {
     }
     
+    @IBAction func unwidSegue(segue: UIStoryboardSegue)
+    {
+        userNameTextField.text = ""
+        userPasswordTextField.text = ""
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let welcomeVC = segue.destination as! UserWelcomeViewController
-        welcomeVC.userName = "Test user name"
+        welcomeVC.userName = userNameTextField.text
     }
     
 }
