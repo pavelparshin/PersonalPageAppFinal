@@ -22,5 +22,10 @@ class ViewController: UIViewController {
     @IBAction func pressLogInButton() {
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let welcomeVC = segue.destination as! UserWelcomeViewController
+        welcomeVC.userName = "Test user name"
+    }
+    
 }
 

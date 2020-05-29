@@ -39,7 +39,7 @@
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="pressLogInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="qQc-uA-L5i"/>
-                                            <segue destination="3u8-se-gVD" kind="presentation" modalPresentationStyle="fullScreen" id="osS-Rn-beX"/>
+                                            <segue destination="xZg-aO-GRC" kind="presentation" modalPresentationStyle="fullScreen" id="3pt-xp-1Ey"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zfQ-LW-xvy">
@@ -89,16 +89,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="cBQ-64-Cjp">
-                                <rect key="frame" x="49" y="182.5" width="222" height="83"/>
+                                <rect key="frame" x="49" y="184.5" width="222" height="79"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGu-IF-72K">
-                                        <rect key="frame" x="0.0" y="0.0" width="222" height="31.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGu-IF-72K">
+                                        <rect key="frame" x="0.0" y="0.0" width="222" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcw-Dd-6fs">
-                                        <rect key="frame" x="0.0" y="62.5" width="222" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="58.5" width="222" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -109,7 +109,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C18-sY-Hyg">
-                                <rect key="frame" x="121.5" y="430" width="77" height="39"/>
+                                <rect key="frame" x="121.5" y="479" width="77" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
@@ -188,6 +188,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3u8-se-gVD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aFT-Mi-pZR">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -220,4 +221,7 @@
             <point key="canvasLocation" x="1683.75" y="938.02816901408448"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="3pt-xp-1Ey"/>
+    </inferredMetricsTieBreakers>
 </document>
