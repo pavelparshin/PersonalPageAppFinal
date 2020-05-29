@@ -22,6 +22,16 @@ class ViewController: UIViewController {
     @IBAction func pressLogInButton() {
     }
     
+    @IBAction func forgotUserNameAction() {
+        let forgottenUserName = UserLogIn.getUserAccess().user
+        showAlert(title: "Ooops!", message: "Your name is \(forgottenUserName)")
+    }
+    
+    @IBAction func forgotPasswordAction() {
+        let forgottenPassword = UserLogIn.getUserAccess().password
+        showAlert(title: "Ooops!", message: "Your password is \(forgottenPassword)")
+    }
+    
     @IBAction func unwidSegue(segue: UIStoryboardSegue)
     {
         userNameTextField.text = ""
@@ -29,17 +39,43 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let welcomeVC = segue.destination as! UserWelcomeViewController
-        welcomeVC.userName = userNameTextField.text
+        guard let inputUserName = userNameTextField.text, !inputUserName.isEmpty else {
+            showAlert(title: "Invalid login", message: "Please enter your User Name")
+            return
+        }
+        
+        guard let inputPassword = userPasswordTextField.text, !inputPassword.isEmpty else {
+            showAlert(title: "Invalid password", message: "Please enter your Password")
+            return
+        }
+        
+        if checkUserAccess(login: inputUserName, password: inputPassword) {
+            let welcomeVC = segue.destination as! UserWelcomeViewController
+            welcomeVC.userName = inputUserName
+        }
     }
 }
 
 //MARK: UIAlertController
-extension UIViewController {
+extension ViewController {
     
-    private func forgotUserName(title: String, and message: String) {
+    private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAlertAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            self.userPasswordTextField.text = ""
+        }
+        alert.addAction(okAlertAction)
         present(alert, animated: true)
+    }
+    
+    private func checkUserAccess(login: String, password: String) -> Bool {
+        if login != UserLogIn.getUserAccess().user && password != UserLogIn.getUserAccess().password {
+            showAlert(title: "Invalid access", message: "Please enter your valid User Name and Password")
+            return false
+        } else {
+            return true
+            
+        }
     }
 }
 

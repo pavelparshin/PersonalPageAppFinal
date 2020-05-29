@@ -11,3 +11,9 @@ struct UserLogIn {
     let user: String
     let password: String
 }
+
+extension UserLogIn {
+    static func getUserAccess() -> UserLogIn {
+        return UserLogIn(user: "user", password: "password")
+    }
+}

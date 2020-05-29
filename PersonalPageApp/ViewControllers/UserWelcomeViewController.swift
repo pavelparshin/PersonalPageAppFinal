@@ -12,14 +12,14 @@ class UserWelcomeViewController: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
     @IBOutlet var dayLabel: UILabel!
-    var userName: String!
+    var userName = ""
     
     @IBOutlet var logOutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomeLabel.text = "Welcome \(userName!)!"
+        welcomeLabel.text = "Welcome \(userName)!"
         dayLabel.text = getGoodMessage()
     }
     
