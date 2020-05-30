@@ -9,22 +9,32 @@
 import UIKit
 
 class UserDetailsViewController: UIViewController {
-
+    @IBOutlet var userPictureView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        userPictureView.layer.cornerRadius = 15
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func currentWorkButton(_ sender: UIButton) {
     }
-    */
-
+    
+    @IBAction func hobbyButton(_ sender: UIButton) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let userMoreDetail = segue.destination as? UserMoreDetailsViewController else { return }
+        if segue.identifier == "currentWorkSegue" {
+            userMoreDetail.typeOfInformation = PersonInformation.currentWork
+        }
+        
+        switch segue.identifier {
+        case "currentWorkSegue": userMoreDetail.typeOfInformation = PersonInformation.currentWork
+        case "hobbySegue": userMoreDetail.typeOfInformation = PersonInformation.hobby
+        default:
+            return
+        }
+    }
 }
