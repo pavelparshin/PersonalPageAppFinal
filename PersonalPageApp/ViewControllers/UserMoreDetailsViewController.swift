@@ -9,22 +9,23 @@
 import UIKit
 
 class UserMoreDetailsViewController: UIViewController {
-
+    
+    @IBOutlet var currentJobStackView: UIStackView!
+    @IBOutlet var hobbyStackView: UIStackView!
+    
+    var typeOfInformation: PersonInformation!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        switch typeOfInformation {
+        case .currentWork: 
+            currentJobStackView.isHidden = false
+            hobbyStackView.isHidden = true
+        case .hobby:
+            currentJobStackView.isHidden = true
+            hobbyStackView.isHidden = false
+        default: return
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

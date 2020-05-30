@@ -18,9 +18,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        userNameTextField.tag = 0
+        userNameTextField.delegate = self
+        userPasswordTextField.tag = 1
+        userPasswordTextField.delegate = self
     }
-
+    
+    //Buttons
     @IBAction func pressLogInButton() {
         
         if checkUserAccess(login: userNameTextField.text, password: userPasswordTextField.text)
@@ -42,11 +47,12 @@ class ViewController: UIViewController {
         }
     }
     
+    //Segue
     @IBAction func unwidSegue(segue: UIStoryboardSegue)
     {
         userNameTextField.text = ""
         userPasswordTextField.text = ""
-        validUserName = "" 
+        validUserName = ""
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -95,9 +101,16 @@ extension ViewController {
     }
 }
 
+// MARK: textFieldShouldReturn
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+       let txtTag:Int = textField.tag
+
+        if let textFieldNxt = self.view.viewWithTag(txtTag+1) as? UITextField {
+            textFieldNxt.becomeFirstResponder()
+        }else{
+            textField.resignFirstResponder()
+        }
         return true
     }
 }
