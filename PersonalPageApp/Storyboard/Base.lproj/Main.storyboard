@@ -39,7 +39,6 @@
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="pressLogInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="qQc-uA-L5i"/>
-                                            <segue destination="xZg-aO-GRC" kind="presentation" modalPresentationStyle="fullScreen" id="3pt-xp-1Ey"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zfQ-LW-xvy">
@@ -50,15 +49,15 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Forgot User name?"/>
                                                 <connections>
-                                                    <action selector="forgotUserNameAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="B48-LN-rEq"/>
+                                                    <action selector="forgotLogInPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SMU-Zl-jH9"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMZ-Zu-cHl">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMZ-Zu-cHl">
                                                 <rect key="frame" x="148" y="0.0" width="132" height="28"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Forgot Password?"/>
                                                 <connections>
-                                                    <action selector="forgotPasswordAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="hIe-dt-01y"/>
+                                                    <action selector="forgotLogInPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Abg-Vw-WWR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -80,13 +79,14 @@
                         <outlet property="logInButton" destination="Nb9-fe-7It" id="Hsy-Qx-hcT"/>
                         <outlet property="userNameTextField" destination="g1X-c9-uEd" id="CbD-hh-zgr"/>
                         <outlet property="userPasswordTextField" destination="MAv-du-W7J" id="r7Q-qg-Wek"/>
+                        <segue destination="3u8-se-gVD" kind="presentation" identifier="enterSegue" modalPresentationStyle="fullScreen" id="onK-RD-dMJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="138"/>
         </scene>
-        <!--Item-->
+        <!--Welcome-->
         <scene sceneID="rte-Ec-07a">
             <objects>
                 <viewController id="xZg-aO-GRC" customClass="UserWelcomeViewController" customModule="PersonalPageApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -115,7 +115,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C18-sY-Hyg">
-                                <rect key="frame" x="121.5" y="479" width="77" height="39"/>
+                                <rect key="frame" x="121.5" y="430" width="77" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
@@ -133,7 +133,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1HV-y5-M3Z"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="d0F-Yu-xex"/>
+                    <tabBarItem key="tabBarItem" title="Welcome" image="person.fill" catalog="system" id="d0F-Yu-xex"/>
                     <connections>
                         <outlet property="dayLabel" destination="fcw-Dd-6fs" id="c3E-mN-QP6"/>
                         <outlet property="logOutButton" destination="C18-sY-Hyg" id="cJe-uj-q49"/>
@@ -209,11 +209,11 @@
             </objects>
             <point key="canvasLocation" x="1337" y="137"/>
         </scene>
-        <!--Item-->
+        <!--Info-->
         <scene sceneID="0RZ-en-3bk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A1b-UX-NJk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mDF-Kb-8DA"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="info" catalog="system" id="mDF-Kb-8DA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cs8-RI-0Uo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -229,7 +229,8 @@
             <point key="canvasLocation" x="1683.75" y="938.02816901408448"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="3pt-xp-1Ey"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="info" catalog="system" width="93" height="128"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+    </resources>
 </document>
