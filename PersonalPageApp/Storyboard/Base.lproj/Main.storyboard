@@ -163,7 +163,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FlG-Ti-Qwx">
-                                <rect key="frame" x="30" y="100" width="260" height="294.5"/>
+                                <rect key="frame" x="30" y="100" width="260" height="297"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="oIb-bF-Vnv">
                                         <rect key="frame" x="2.5" y="0.0" width="255" height="132"/>
@@ -214,16 +214,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="seP-Jj-vdB">
-                                        <rect key="frame" x="0.0" y="147" width="260" height="147.5"/>
+                                        <rect key="frame" x="0.0" y="147" width="260" height="150"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Programming skills:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I8-ba-ZbW">
-                                                <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WE8-J5-fN9">
-                                                <rect key="frame" x="0.0" y="25.5" width="260" height="122"/>
+                                                <rect key="frame" x="0.0" y="28" width="260" height="122"/>
                                                 <string key="text">-2005 - 2009 PHP developer. Create commercial web sites
 -2017 - 2018 study Java
 -April 2019 start study Swift
