@@ -79,7 +79,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="logInButton" destination="Nb9-fe-7It" id="Hsy-Qx-hcT"/>
                         <outlet property="userNameTextField" destination="g1X-c9-uEd" id="CbD-hh-zgr"/>
                         <outlet property="userPasswordTextField" destination="MAv-du-W7J" id="r7Q-qg-Wek"/>
                         <segue destination="3u8-se-gVD" kind="presentation" identifier="enterSegue" modalPresentationStyle="fullScreen" id="onK-RD-dMJ"/>

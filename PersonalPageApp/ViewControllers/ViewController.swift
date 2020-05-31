@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var userPasswordTextField: UITextField!
-    @IBOutlet var logInButton: UIButton!
     
     var validUserName = ""
     
@@ -20,9 +19,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         userNameTextField.tag = 0
-        userNameTextField.delegate = self
         userPasswordTextField.tag = 1
-        userPasswordTextField.delegate = self
+        userNameTextField.delegate = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBarController = segue.destination as! UITabBarController
+        let welcomeVC = tabBarController.viewControllers?.first as! UserWelcomeViewController
+        welcomeVC.userName = validUserName
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     //Buttons
@@ -54,18 +62,12 @@ class ViewController: UIViewController {
         userPasswordTextField.text = ""
         validUserName = ""
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBarController = segue.destination as! UITabBarController
-        let welcomeVC = tabBarController.viewControllers?.first as! UserWelcomeViewController
-        welcomeVC.userName = validUserName
-    }
 }
 
 
-//MARK: UIAlertController, checkUserAccess, touchesBegan
+//MARK: showAlert: UIAlertController, checkUserAccess
 extension ViewController {
-
+    
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAlertAction = UIAlertAction(title: "Ok", style: .default) { _ in
@@ -94,10 +96,6 @@ extension ViewController {
             return true
             
         }
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
     }
 }
 

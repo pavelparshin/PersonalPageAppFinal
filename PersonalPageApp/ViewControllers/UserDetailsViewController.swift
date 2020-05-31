@@ -17,13 +17,6 @@ class UserDetailsViewController: UIViewController {
         userPictureView.layer.cornerRadius = 15
     }
     
-    
-    @IBAction func currentWorkButton(_ sender: UIButton) {
-    }
-    
-    @IBAction func hobbyButton(_ sender: UIButton) {
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let userMoreDetail = segue.destination as? UserMoreDetailsViewController else { return }
         if segue.identifier == "currentWorkSegue" {
@@ -37,4 +30,12 @@ class UserDetailsViewController: UIViewController {
             return
         }
     }
+    
+    @IBAction func currentWorkButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func hobbyButton(_ sender: UIButton) {
+    }
+    
+    
 }

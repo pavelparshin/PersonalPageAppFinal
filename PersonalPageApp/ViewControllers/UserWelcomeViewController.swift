@@ -44,9 +44,12 @@ class UserWelcomeViewController: UIViewController {
         let hour = calendar.component(.hour, from: date)
         return hour
     }
+}
+
+extension UserWelcomeViewController {
     
     //Градиентная заливка фона устанавливается в зависимости от фазы дня
-    func setGradientBackground() {
+    private func setGradientBackground() {
     
         var colorTop: CGColor
         switch phaseOfTheDay() {
@@ -74,5 +77,4 @@ class UserWelcomeViewController: UIViewController {
         setGradientBackground()
         super.viewWillAppear(animated)
     }
-    
 }

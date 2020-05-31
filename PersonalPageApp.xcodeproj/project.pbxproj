@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B1F479C2481729300866EF3 /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1F479B2481729300866EF3 /* temp.swift */; };
 		2BB1EC6D2482BFDE005055BC /* PersonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1EC6C2482BFDE005055BC /* PersonInformation.swift */; };
 		2BC93D082480F91B00CD53DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC93D072480F91B00CD53DC /* AppDelegate.swift */; };
 		2BC93D0A2480F91B00CD53DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC93D092480F91B00CD53DC /* SceneDelegate.swift */; };
@@ -23,7 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B1F479B2481729300866EF3 /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
 		2BB1EC6C2482BFDE005055BC /* PersonInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformation.swift; sourceTree = "<group>"; };
 		2BC93D042480F91B00CD53DC /* PersonalPageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalPageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC93D072480F91B00CD53DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				2BC93D1F24810DE800CD53DC /* UserDetailsViewController.swift */,
 				2BC93D2824811F4100CD53DC /* UserWelcomeViewController.swift */,
 				2BC93D2A24811F8B00CD53DC /* UserMoreDetailsViewController.swift */,
-				2B1F479B2481729300866EF3 /* temp.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -208,7 +205,6 @@
 				2BC93D2924811F4100CD53DC /* UserWelcomeViewController.swift in Sources */,
 				2BC93D2024810DE800CD53DC /* UserDetailsViewController.swift in Sources */,
 				2BC93D0A2480F91B00CD53DC /* SceneDelegate.swift in Sources */,
-				2B1F479C2481729300866EF3 /* temp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
