@@ -30,7 +30,8 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     //Buttons
@@ -42,8 +43,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func forgotLogInPassword(_ sender: UIButton)
-    {
+    @IBAction func forgotLogInPassword(_ sender: UIButton) {
         switch sender.tag {
         case 0:
             let forgottenUserName = UserLogIn.getUserAccess().user
@@ -56,8 +56,7 @@ class ViewController: UIViewController {
     }
     
     //Segue
-    @IBAction func unwidSegue(segue: UIStoryboardSegue)
-    {
+    @IBAction func unwidSegue(segue: UIStoryboardSegue) {
         userNameTextField.text = ""
         userPasswordTextField.text = ""
         validUserName = ""
@@ -88,7 +87,9 @@ extension ViewController {
             return false
         }
         
-        if login != UserLogIn.getUserAccess().user || password != UserLogIn.getUserAccess().password {
+        let accessLogIn = UserLogIn.getUserAccess()
+        
+        if login != accessLogIn.user || password != accessLogIn.password {
             showAlert(title: "Invalid access", message: "Please enter your valid User Name and Password")
             return false
         } else {
@@ -102,9 +103,8 @@ extension ViewController {
 // MARK: textFieldShouldReturn
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-       let txtTag:Int = textField.tag
 
-        if let textFieldNxt = self.view.viewWithTag(txtTag+1) as? UITextField {
+        if let textFieldNxt = self.view.viewWithTag(textField.tag + 1) as? UITextField {
             textFieldNxt.becomeFirstResponder()
         }else{
             textField.resignFirstResponder()

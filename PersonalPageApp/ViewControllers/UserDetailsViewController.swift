@@ -31,11 +31,4 @@ class UserDetailsViewController: UIViewController {
         }
     }
     
-    @IBAction func currentWorkButton(_ sender: UIButton) {
-    }
-    
-    @IBAction func hobbyButton(_ sender: UIButton) {
-    }
-    
-    
 }

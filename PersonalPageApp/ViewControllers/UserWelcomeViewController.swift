@@ -19,7 +19,7 @@ class UserWelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let userName = self.userName else { return }
+        guard let userName = userName else { return }
         welcomeLabel.text = "Welcome \(userName)!"
         dayLabel.text = "Good \(phaseOfTheDay().rawValue)!"
     }
@@ -54,16 +54,31 @@ extension UserWelcomeViewController {
         var colorTop: CGColor
         switch phaseOfTheDay() {
         case .morning:
-            colorTop =  UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 0.0/255.0, alpha: 1.0).cgColor
+            colorTop =  UIColor(red: 255.0/255.0,
+                                green: 255.0/255.0,
+                                blue: 0.0/255.0,
+                                alpha: 1.0).cgColor
         case .day:
-            colorTop =  UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 255.0/255.0, alpha: 0.3).cgColor
+            colorTop =  UIColor(red: 0.0/255.0,
+                                green: 0.0/255.0,
+                                blue: 255.0/255.0,
+                                alpha: 0.3).cgColor
         case .evening:
-            colorTop =  UIColor(red: 50.0/255.0, green: 0.0/255.0, blue: 128.0/255.0, alpha: 1.0).cgColor
+            colorTop =  UIColor(red: 50.0/255.0,
+                                green: 0.0/255.0,
+                                blue: 128.0/255.0,
+                                alpha: 1.0).cgColor
         case .night:
-            colorTop =  UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 100.0/255.0, alpha: 1.0).cgColor
+            colorTop =  UIColor(red: 0.0/255.0,
+                                green: 0.0/255.0,
+                                blue: 100.0/255.0,
+                                alpha: 1.0).cgColor
         }
         
-        let colorBottom = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
+        let colorBottom = UIColor(red: 255.0/255.0,
+                                  green: 255.0/255.0,
+                                  blue: 255.0/255.0,
+                                  alpha: 1.0).cgColor
 
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorBottom]

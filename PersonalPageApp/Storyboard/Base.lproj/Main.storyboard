@@ -186,16 +186,14 @@
                                                         <rect key="frame" x="0.0" y="42" width="90" height="30"/>
                                                         <state key="normal" title="Current work"/>
                                                         <connections>
-                                                            <action selector="currentWorkButton:" destination="d45-hq-HGS" eventType="touchUpInside" id="6fq-VX-3zi"/>
-                                                            <segue destination="aGo-nC-OzG" kind="show" identifier="currentWorkSegue" id="lbO-8X-nUf"/>
+                                                            <segue destination="aGo-nC-OzG" kind="show" identifier="currentWorkSegue" id="YBE-hB-ya5"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aED-ej-WM6">
                                                         <rect key="frame" x="0.0" y="75" width="53" height="30"/>
                                                         <state key="normal" title="Hobbys"/>
                                                         <connections>
-                                                            <action selector="hobbyButton:" destination="d45-hq-HGS" eventType="touchUpInside" id="x6r-KG-Nbb"/>
-                                                            <segue destination="aGo-nC-OzG" kind="show" identifier="hobbySegue" id="1ce-i9-dFx"/>
+                                                            <segue destination="aGo-nC-OzG" kind="show" identifier="hobbySegue" id="mfE-zW-YTs"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -373,7 +371,7 @@ Finally I am model trainer and I teach them work on the camera.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1ce-i9-dFx"/>
+        <segue reference="mfE-zW-YTs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="_PPP0774bw_mini" width="1000" height="1000"/>
